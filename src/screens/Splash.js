@@ -1,57 +1,32 @@
-import React from "react";
-import { Text, View, Image, Button } from "react-native";
+import React from 'react';
+import { View, Image, StyleSheet, Button } from 'react-native';
 import globalStyles from "../styles/globalStyles";
 
 const Splash = ({ navigation }) => {
   return (
     <View style={globalStyles.container}>
-      <View style={globalStyles.header}>
-        <Image
-          source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
-          style={globalStyles.headerImage}
-        />
-        <Text style={globalStyles.headerText}>Demo React App</Text>
-      </View>
-
-      <Text style={globalStyles.title}>Anubhutii</Text>
-      <Text style={globalStyles.header1}>Welcome's You !! </Text>
-
       <Image
-        source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
-        style={globalStyles.image}
+        source={require('../assets/logo.png')}
+        style={globalStyles.logo}
       />
-      <Text style={globalStyles.caption}>This is a Demo React Native page</Text>
+      <Image
+        source={require('../assets/background.jpg')}
+        style={globalStyles.backgroundImage}
+      />
 
-      <View style={{ flexDirection: "row", marginTop: 20 }}>
-        <Button
-          title="LOGIN  !!"
-          color="purple"
-          onPress={() => navigation.navigate("Login")}
-        />
-        <View style={{ width: 12 }} />
-        <Button
-          title="Task 1"
-          color="orange"
-          onPress={() => navigation.navigate("Card")}
-        />
-        <View style={{ width: 12 }} />
-        <Button
-          title="Task 2"
-          color="green"
-          onPress={() => navigation.navigate("Bp")}
-        />
-      <View style={{ width: 12 }} />
-      <Button
-        title="Task 3"
-        color="Yellow"
-        onPress={() => navigation.navigate("Data")}
-      />
-      <View style={{ width: 12 }} />
-      <Button
-        title="Task 4"
-        color="White"
-        onPress={() => navigation.navigate("Bdata")}
-      />
+      <View style={{ flexDirection: "row", marginTop: 40 }}>
+          <Button
+            title="LOGIN  !!"
+            color="green"
+            onPress={() => navigation.navigate("LoginScreen")}
+          />
+
+          <View style={{ width: 12 }} />
+          <Button
+              title="TASKS  !!"
+              color="green"
+              onPress={() => navigation.navigate("Task")}
+            />
       </View>
     </View>
   );
