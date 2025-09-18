@@ -1,26 +1,42 @@
-import { StyleSheet, Dimensions } from 'react-native';
-
-const { width, height } = Dimensions.get('window');
-
-const styles = StyleSheet.create({
+const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#353A81',
+  },
+  backgroundImage: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover', // Ensures the image covers the entire screen
+    position: 'absolute', // Allows other elements to be layered on top
+  },
+  contentContainer: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
   logo: {
-    width: width * 0.5, // 50% of the screen width for a responsive design
-    height: width * 0.5, // Maintain aspect ratio
+    width: 200, // Adjust size as needed
+    height: 200, // Adjust size as needed
     resizeMode: 'contain',
   },
-  backgroundImage: {
+  circle: {
     position: 'absolute',
-    width: '100%',
-    height: '100%',
-    opacity: 0.1, // Adjust opacity as needed
-    resizeMode: 'cover',
+    borderRadius: 9999,
+    borderWidth: 2,
+    borderColor: 'rgba(255, 255, 255, 0.2)',
+  },
+  circleLg: {
+    width: 400, // Adjust size
+    height: 400,
+  },
+  circleMd: {
+    width: 350, // Adjust size
+    height: 350,
+  },
+  circleSm: {
+    width: 300, // Adjust size
+    height: 300,
   },
 });
 
-export default styles;
+export default globalStyles;
