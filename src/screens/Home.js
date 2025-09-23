@@ -129,7 +129,10 @@ const Home = ({ navigation }) => {
               <Text style={homeStyles.categoryText}>Academies</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={homeStyles.categoryItem}>
+            <TouchableOpacity
+              style={homeStyles.categoryItem}
+               onPress={() => navigation.navigate('LatestUpdate')}
+            >
               <Icon name="newspaper-outline" size={28} color="#fff" />
               <Text style={homeStyles.categoryText}>News</Text>
             </TouchableOpacity>
@@ -172,7 +175,11 @@ const Home = ({ navigation }) => {
               <Text style={homeStyles.navTextLive}>Live</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={homeStyles.navItem}>
+
+            <TouchableOpacity
+              style={homeStyles.navItem}
+               onPress={() => navigation.navigate('Videos')}
+            >
               <Icon name="play-circle-outline" size={24} color="#fff" />
               <Text style={homeStyles.navText}>Videos</Text>
             </TouchableOpacity>

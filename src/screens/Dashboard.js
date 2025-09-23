@@ -137,7 +137,10 @@ const Dashboard = ({ navigation }) => {
                       <Text style={homeStyles.categoryText}>Academies</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={homeStyles.categoryItem}>
+                    <TouchableOpacity
+                      style={homeStyles.categoryItem}
+                       onPress={() => navigation.navigate('LatestUpdate')}
+                    >
                       <Icon name="newspaper-outline" size={28} color="#fff" />
                       <Text style={homeStyles.categoryText}>News</Text>
                     </TouchableOpacity>
@@ -214,12 +217,18 @@ const Dashboard = ({ navigation }) => {
           <Text style={homeStyles.navText}>Event</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={homeStyles.navItem}>
+        <TouchableOpacity
+          style={homeStyles.navItem}
+           onPress={() => navigation.navigate('Videos')}
+        >
           <Icon name="videocam-outline" size={24} color="#fff" />
           <Text style={homeStyles.navText}>Videos</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={homeStyles.navItem}>
+        <TouchableOpacity
+          style={homeStyles.navItem}
+           onPress={() => navigation.navigate('TeamsScreen')}
+        >
           <Icon name="people-outline" size={24} color="#fff" />
           <Text style={homeStyles.navText}>Teams</Text>
         </TouchableOpacity>

@@ -5,31 +5,31 @@ import homeStyles from "../styles/homeStyles";
 
 const { width } = Dimensions.get('window');
 
-const Photos = [
+const photosData = [
   {
     id: 1,
     title: "Day 4 of 69th Senior National Men's Kabaddi Championship",
-    source={require("../assets/photo1.png")}
+    source: require("../assets/photo1.png")
   },
   {
     id: 2,
     title: "Day 3 of 69th Senior National Men's Kabaddi Championship",
-    source={require("../assets/photo2.png")}
+    source: require("../assets/photo2.png")
   },
   {
     id: 3,
     title: "Vivo Pro Kabaddi Player Auction - Meet the Retained Heroes!",
-   source={require("../assets/photo3.png")}
+    source: require("../assets/photo3.png")
   },
   {
     id: 4,
     title: "47th Junior National Kabaddi Championship: Day 4",
-    image: source={require("../assets/photo4.png")}
+    source: require("../assets/photo4.png")
   },
   {
     id: 5,
     title: "47th Junior National Kabaddi Championship: Day 3",
-    source={require("../assets/photo5.png")},
+    source: require("../assets/photo4.png")
   },
 ];
 
@@ -59,9 +59,9 @@ const Photos = ({ navigation }) => {
       <ScrollView contentContainerStyle={homeStyles.photosContainer}>
         <Text style={homeStyles.photosGalleryTitle}>Photos Gallery</Text>
 
-        {Photos.map((photo) => (
+        {photosData.map((photo) => (
           <TouchableOpacity key={photo.id} style={homeStyles.photoCard}>
-            <Image source={{ uri: photo.image }} style={homeStyles.photoImage} />
+            <Image source={photo.source} style={homeStyles.photoImage} />
             <View style={homeStyles.photoTextContainer}>
               <Text style={homeStyles.photoTitleText}>{photo.title}</Text>
             </View>

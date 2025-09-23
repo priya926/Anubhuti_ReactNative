@@ -572,6 +572,134 @@ const homeStyles = StyleSheet.create({
       fontWeight: 'bold',
       lineHeight: 20, // Ensures proper spacing for multi-line text
     },
+    // Add these new styles to your existing homeStyles.js file
+
+    homeScrollView: {
+      paddingVertical: 15,
+      flexGrow: 1,
+      paddingBottom: 80,
+    },
+    homeSection: {
+      marginBottom: 20,
+    },
+    homeSectionHeader: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      paddingHorizontal: 15,
+      marginBottom: 10,
+    },
+    homeSectionTitleText: {
+      fontSize: 20,
+      fontWeight: 'bold',
+      color: '#fff',
+    },
+    horizontalScrollView: {
+      paddingHorizontal: 15,
+    },
+    homeVideoCard: {
+      backgroundColor: '#1E1E70',
+      borderRadius: 8,
+      width: width * 0.85, // Adjust width to show a portion of the next card
+      marginRight: 15,
+      overflow: 'hidden',
+    },
+    homeVideoThumbnailContainer: {
+      position: 'relative',
+      height: 200,
+      width: '100%',
+    },
+    homeVideoThumbnail: {
+      width: '100%',
+      height: '100%',
+      resizeMode: 'cover',
+    },
+    homePlayIconContainer: {
+      position: 'absolute',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: 50,
+      height: 50,
+      borderRadius: 25,
+      backgroundColor: '#FD721D',
+      top: '50%',
+      left: '50%',
+      transform: [{ translateX: -25 }, { translateY: -25 }],
+    },
+    homeVideoContent: {
+      padding: 15,
+    },
+    homeVideoTitle: {
+      color: '#fff',
+      fontSize: 14,
+      fontWeight: 'bold',
+      marginBottom: 10,
+    },
+    homeVideoMetaContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    },
+    homeVideoMetaText: {
+      color: '#fff',
+      fontSize: 12,
+      marginLeft: 5,
+    },
+    homeShareButton: {
+      marginLeft: 'auto',
+    },
+    teamsScrollView: {
+        paddingHorizontal: 15,
+        flexGrow: 1,
+        paddingBottom: 80, // Space for the bottom nav
+      },
+      teamDropdownsContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginBottom: 20,
+      },
+      teamDropdown: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#1E1E70',
+        borderRadius: 8,
+        paddingHorizontal: 15,
+        paddingVertical: 10,
+        width: (width - 45) / 2, // 15*3 padding
+        justifyContent: 'space-between',
+      },
+      teamDropdownText: {
+        color: '#fff',
+        fontSize: 14,
+      },
+      teamCard: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#1E1E70',
+        borderRadius: 8,
+        padding: 15,
+        marginBottom: 10,
+      },
+      teamCardLogo: {
+        width: 50,
+        height: 50,
+        borderRadius: 25,
+        marginRight: 15,
+      },
+      teamCardTextContainer: {
+        flex: 1,
+      },
+      teamCardTitle: {
+        color: '#fff',
+        fontSize: 16,
+        fontWeight: 'bold',
+      },
+      teamCardSubtitle: {
+        color: '#aaa',
+        fontSize: 12,
+        marginTop: 2,
+      },
+
 
 });
 
