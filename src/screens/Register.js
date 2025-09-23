@@ -4,7 +4,8 @@ import Icon from "react-native-vector-icons/Ionicons";
 import loginStyles from "../styles/loginStyles";
 import Background from '../components/Background';
 
-const LoginScreen = ({ navigation }) => {
+const Register = ({ navigation }) => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [secureText, setSecureText] = useState(true);
@@ -14,7 +15,20 @@ const LoginScreen = ({ navigation }) => {
     <Background>
       {/* The new wrapper for the form content, applying padding and width */}
       <View style={loginStyles.formWrapper}>
-        <Text style={loginStyles.title}>Welcome back !</Text>
+        <Text style={loginStyles.title}>Create an Account</Text>
+        <Text style={loginStyles.subTitle}>Create an account to save your team,
+                                           club & league preferences.</Text>
+
+        <Text style={loginStyles.label}>Name</Text>
+        <View style={loginStyles.inputContainer}>
+          <TextInput
+            style={loginStyles.input}
+            placeholder="Type Here"
+            placeholderTextColor="#aaa"
+            value={name}
+            onChangeText={setName}
+          />
+        </View>
 
         <Text style={loginStyles.label}>Email</Text>
         <View style={loginStyles.inputContainer}>
@@ -47,23 +61,11 @@ const LoginScreen = ({ navigation }) => {
           </Pressable>
         </View>
 
-        <Pressable
-          style={loginStyles.rememberContainer}
-          onPress={() => setRemember(!remember)}
-        >
-          <View style={loginStyles.rememberIcon}>
-            {remember && (
-              <Icon name="checkmark-circle" size={16} color="green" />
-            )}
-          </View>
-          <Text style={loginStyles.rememberText}>Remember me</Text>
-        </Pressable>
-
         <TouchableOpacity
           style={loginStyles.loginBtn}
-          onPress={() => navigation.navigate("Home")}
+          onPress={() => navigation.navigate("LoginScreen")}
         >
-          <Text style={loginStyles.loginText}>Log In</Text>
+          <Text style={loginStyles.loginText}>Sign In</Text>
         </TouchableOpacity>
 
         <View style={loginStyles.orContainer}>
@@ -73,21 +75,14 @@ const LoginScreen = ({ navigation }) => {
         </View>
 
         <View style={loginStyles.accountPromptContainer}>
-          <Pressable onPress={() => navigation.navigate("Forget")}>
-            <Text style={loginStyles.orangeLinkText}>Forgot Password?</Text>
+          <Text style={loginStyles.accountPromptText}>Already have an account?</Text>
+          <Pressable onPress={() => navigation.navigate("LoginScreen")}>
+            <Text style={loginStyles.orangeLinkText}>Log In</Text>
           </Pressable>
         </View>
-
-        <View style={loginStyles.accountPromptContainer}>
-          <Text style={loginStyles.accountPromptText}>Don't have an account? </Text>
-          <Pressable onPress={() => navigation.navigate("Register")}>
-            <Text style={loginStyles.orangeLinkText}>Sign Up</Text>
-          </Pressable>
-        </View>
-
       </View>
     </Background>
   );
 };
 
-export default LoginScreen;
+export default Register;

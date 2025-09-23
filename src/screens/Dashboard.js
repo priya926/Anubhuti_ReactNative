@@ -7,6 +7,30 @@ import CategorySection from "../components/CategorySection";
 
 const { width } = Dimensions.get("window");
 
+const coaches = [
+  { name: 'Abhishek Yadav', role: 'Selection Committee', image: require('../assets/coach1.png') },
+  { name: 'Ashok Shinde', role: 'Air-India Flight Purser', image: require('../assets/coach2.png') },
+  { name: 'Banani Shah', role: 'NIS Coach', image: require('../assets/coach3.png') },
+  { name: 'BC Ramesh', role: 'Head Coach of Bengal', image: require('../assets/coach4.png') },
+  { name: 'Bhaskaran E', role: 'CAPT. Bhaskarane', image: require('../assets/coach5.png') },
+  { name: 'Dr G R Sridhar Kumar', role: 'Chief Kabaddi Coach', image: require('../assets/coach6.png') },
+  { name: 'Dr G R Sridhar Kumar', role: 'Chief Kabaddi Coach', image: require('../assets/coach6.png') },
+  { name: 'Dr G R Sridhar Kumar', role: 'Chief Kabaddi Coach', image: require('../assets/coach6.png') },
+];
+
+const referees = [
+  { name: 'Sharafat Ali', role: 'Technical Official', image: require('../assets/ref1.png') },
+  { name: 'Abdul Jabbar', role: 'Physical Instructor', image: require('../assets/ref2.png') },
+  { name: 'Sunil Kumar', role: 'Technical Official', image: require('../assets/ref3.png') },
+  { name: 'S Raju', role: 'Engineer at Shree cement', image: require('../assets/ref4.png') },
+  { name: 'Vikram', role: 'Technical Official', image: require('../assets/ref5.png') },
+  { name: 'Angrej Singh', role: 'Punjab Kabaddi Association', image: require('../assets/ref6.png') },
+  { name: 'Angrej Singh', role: 'Punjab Kabaddi Association', image: require('../assets/ref6.png') },
+  { name: 'Angrej Singh', role: 'Punjab Kabaddi Association', image: require('../assets/ref6.png') },
+];
+
+
+
 const Dashboard = ({ navigation }) => {
   return (
     <View style={homeStyles.mainContainer}>
@@ -47,7 +71,7 @@ const Dashboard = ({ navigation }) => {
                   resizeMode="cover"
                 />
                 <Image
-                  source={require("../assets/flag.jpg")}
+                  source={require("../assets/player1.png")}
                   style={homeStyles.banner}
                   resizeMode="cover"
                 />
@@ -60,7 +84,66 @@ const Dashboard = ({ navigation }) => {
          </View>
 
 
-        <CategorySection />
+        <Text style={homeStyles.sectionTitle}>Category</Text>
+                <View style={homeStyles.categoryContainer}>
+                  <View style={homeStyles.categoryRow}>
+
+                    <TouchableOpacity style={homeStyles.categoryItem}>
+                      <Icon name="medal-outline" size={28} color="#fff" />
+                      <Text style={homeStyles.categoryText}>Olympic</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={homeStyles.categoryItem}>
+                      <Icon name="person-outline" size={28} color="#fff" />
+                      <Text style={homeStyles.categoryText}>Wrestler</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                      style={homeStyles.categoryItem}
+                      onPress={() => navigation.navigate('ListScreen', { title: 'Coaches', data: coaches })}
+                    >
+                      <Icon name="people-outline" size={28} color="#fff" />
+                      <Text style={homeStyles.categoryText}>Coaches</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                      style={homeStyles.categoryItem}
+                      onPress={() => navigation.navigate('ListScreen', { title: 'Referees', data: referees })}
+                    >
+                      <Icon name="shield-outline" size={28} color="#fff" />
+                      <Text style={homeStyles.categoryText}>Referee</Text>
+                    </TouchableOpacity>
+                  </View>
+
+                  <View style={homeStyles.categoryRow}>
+                    <TouchableOpacity
+                      style={homeStyles.categoryItem}
+                       onPress={() => navigation.navigate('Dangal')}
+                    >
+                      <Icon name="trophy-outline" size={28} color="#fff" />
+                      <Text style={homeStyles.categoryText}>Dangal</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                      style={homeStyles.categoryItem}
+                       onPress={() => navigation.navigate('Photos')}
+                    >
+                      <Icon name="images-outline" size={28} color="#fff" />
+                      <Text style={homeStyles.categoryText}>Photos</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={homeStyles.categoryItem}>
+                      <Icon name="school-outline" size={28} color="#fff" />
+                      <Text style={homeStyles.categoryText}>Academies</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={homeStyles.categoryItem}>
+                      <Icon name="newspaper-outline" size={28} color="#fff" />
+                      <Text style={homeStyles.categoryText}>News</Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+
 
 
         <View style={homeStyles.adBannerContainer}>
@@ -72,7 +155,7 @@ const Dashboard = ({ navigation }) => {
             </TouchableOpacity>
           </View>
           <Image
-            source={require("../assets/nike.jpg")}
+            source={require("../assets/nike.png")}
             style={homeStyles.adShoeImage}
             resizeMode="contain"
           />
@@ -81,7 +164,7 @@ const Dashboard = ({ navigation }) => {
 
         <View style={homeStyles.newsHeader}>
           <Text style={homeStyles.sectionTitle}>News</Text>
-          <TouchableOpacity>
+           <TouchableOpacity onPress={() => navigation.navigate('LatestUpdate')}>
             <Text style={homeStyles.viewAll}>View All</Text>
           </TouchableOpacity>
         </View>
@@ -89,32 +172,30 @@ const Dashboard = ({ navigation }) => {
 
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={homeStyles.newsList}>
           <View style={homeStyles.newsCard}>
-            <View style={homeStyles.newsImages}>
-              <Image source={require("../assets/news.jpg")} style={homeStyles.newsImage} />
-              <Image source={require("../assets/news.jpg")} style={homeStyles.newsImage} />
-              <Image source={require("../assets/news.jpg")} style={homeStyles.newsImage} />
-            </View>
+
+              <Image source={require("../assets/news.png")} style={homeStyles.fullNewsImage} />
+
             <Text style={homeStyles.newsTitle}>
               Sushil, Geeta, Sakshi: 5 Indians to Watch in Pro Wrestling League
             </Text>
             <View style={homeStyles.newsMeta}>
-              <Icon name="calendar-outline" size={12} color="orange" />
+              <Icon name="calendar-outline" size={12} color="#FD721D" />
               <Text style={homeStyles.newsMetaText}>Sep 13, 2022</Text>
-              <Icon name="time-outline" size={12} color="orange" style={{ marginLeft: 10 }} />
+              <Icon name="time-outline" size={12} color="#FD721D" style={{ marginLeft: 10 }} />
               <Text style={homeStyles.newsMetaText}>5 min</Text>
             </View>
           </View>
 
           <View style={homeStyles.newsCard}>
-            <Image source={require("../assets/news.jpg")} style={homeStyles.fullNewsImage} />
+            <Image source={require("../assets/news.png")} style={homeStyles.fullNewsImage} />
             <Text style={homeStyles.newsTitle}>
               Story of Sturdy:
               An Indian wrestler making it big
             </Text>
             <View style={homeStyles.newsMeta}>
-              <Icon name="calendar-outline" size={12} color="orange" />
+              <Icon name="calendar-outline" size={12} color="#FD721D" />
               <Text style={homeStyles.newsMetaText}>Sep 13, 2022</Text>
-              <Icon name="time-outline" size={12} color="orange" style={{ marginLeft: 10 }} />
+              <Icon name="time-outline" size={12} color="#FD721D" style={{ marginLeft: 10 }} />
               <Text style={homeStyles.newsMetaText}>5 min</Text>
             </View>
           </View>
@@ -124,7 +205,7 @@ const Dashboard = ({ navigation }) => {
       {/* Bottom Navigation */}
       <View style={homeStyles.bottomNav}>
         <TouchableOpacity style={homeStyles.navItem}>
-          <Icon name="home" size={24} color="orange" />
+          <Icon name="home" size={24} color="#FD721D" />
           <Text style={homeStyles.navTextActive}>Home</Text>
         </TouchableOpacity>
 

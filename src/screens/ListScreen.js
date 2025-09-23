@@ -44,7 +44,7 @@ const ListScreen = ({ navigation, route }) => {
       {/* Bottom Navigation */}
         <View style={homeStyles.bottomNav}>
           <TouchableOpacity style={homeStyles.navItem}>
-            <Icon name="home" size={24} color="orange" />
+            <Icon name="home" size={24} color="#FD721D" />
             <Text style={homeStyles.navTextActive}>Home</Text>
           </TouchableOpacity>
 

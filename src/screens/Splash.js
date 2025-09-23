@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+import { Image } from 'react-native';
+import Background from '../components/Background';
 import globalStyles from '../styles/globalStyles';
 
 const Splash = ({ navigation }) => {
@@ -8,28 +9,15 @@ const Splash = ({ navigation }) => {
       navigation.replace('LoginScreen');
     }, 10000);
     return () => clearTimeout(timer);
-  },
+  }, [navigation]);
 
-
-const Splash = () => {
   return (
-    <View style={globalStyles.container}>
-
+    <Background>
       <Image
-        source={require('../assets/background.jpg')}
-        style={globalStyles.backgroundImage}
+        source={require('../assets/logo.png')}
+        style={globalStyles.logo}
       />
-      <View style={globalStyles.contentContainer}>
-
-        <View style={[globalStyles.circle, globalStyles.circleLg]} />
-        <View style={[globalStyles.circle, globalStyles.circleMd]} />
-        <View style={[globalStyles.circle, globalStyles.circleSm]} />
-        <Image
-          source={require('../assets/logo.png')}
-          style={globalStyles.logo}
-        />
-      </View>
-    </View>
+    </Background>
   );
 };
 

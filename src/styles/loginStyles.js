@@ -1,27 +1,20 @@
 import { StyleSheet } from "react-native";
 
 const loginStyles = StyleSheet.create({
-  mainContainer: {
-      flex: 1,
-      backgroundColor: "#1E1E70",
-      justifyContent: "center",
-      alignItems: "center",
-      padding: 20,
-    },
-  cardContainer: {
+
+  formWrapper: {
     width: "100%",
-    backgroundColor: "rgba(45, 45, 146, 0.9)",
-    borderRadius: 5,
     padding: 25,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 6,
-    elevation: 8,
   },
   title: {
     fontSize: 24,
     fontWeight: "bold",
+    color: "white",
+    textAlign: "center",
+    marginBottom: 30,
+  },
+  subTitle:{
+    fontSize: 17,
     color: "white",
     textAlign: "center",
     marginBottom: 30,
@@ -78,7 +71,7 @@ const loginStyles = StyleSheet.create({
     alignItems: 'center',
   },
   loginBtn: {
-    backgroundColor: "orange",
+    backgroundColor: "#FD721D",
     width: "100%",
     height: 55,
     borderRadius: 10,
@@ -90,6 +83,90 @@ const loginStyles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
   },
+  orContainer: {
+      flexDirection: "row",
+      alignItems: "center",
+      marginVertical: 30,
+    },
+    line: {
+      flex: 1,
+      height: 1,
+      backgroundColor: "white",
+      opacity: 0.5,
+    },
+    orText: {
+      color: "white",
+      marginHorizontal: 10,
+      opacity: 0.8,
+    },
+    accountPromptContainer: {
+      flexDirection: "row",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    accountPromptText: {
+      color: "white",
+    },
+    orangeLinkText: { // This is a more generic name for the same style
+      color: "#FD721D",
+      fontWeight: "bold",
+      marginLeft: 5,
+    },
+    otpContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        width: '100%',
+        marginBottom: 20,
+      },
+      otpInput: {
+        backgroundColor: 'rgba(255, 255, 255, 0.2)',
+        borderRadius: 10,
+        textAlign: 'center',
+        fontSize: 24,
+        color: 'white',
+        borderWidth: 1,
+        borderColor: '#FD721D',
+      },
+      timerContainer: {
+        marginBottom: 20,
+      },
+      timerText: {
+        color: 'white',
+        fontSize: 16,
+      },
+      orangeText: {
+        color: '#FD721D',
+      },
+      verifyButton: {
+        width: '100%',
+        backgroundColor: '#FD721D',
+        paddingVertical: 15,
+        borderRadius: 30,
+        alignItems: 'center',
+        marginTop: 20,
+      },
+      buttonText: {
+        color: 'white',
+        fontSize: 18,
+        fontWeight: 'bold',
+      },
+      resendContainer: {
+        flexDirection: 'row',
+        marginTop: 20,
+      },
+      resendText: {
+        color: 'white',
+        fontSize: 14,
+        marginRight: 5,
+      },
+      resendLink: {
+        color: '#FD721D',
+        fontSize: 14,
+        fontWeight: 'bold',
+      },
+      disabledLink: {
+        color: 'grey',
+      },
 });
 
 export default loginStyles;

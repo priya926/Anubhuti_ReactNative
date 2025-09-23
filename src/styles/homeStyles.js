@@ -54,7 +54,7 @@ const homeStyles = StyleSheet.create({
     marginHorizontal: 3,
   },
   activeDot: {
-    backgroundColor: "orange",
+    backgroundColor: "#FD721D",
     width: 8,
     height: 8,
     borderRadius: 4,
@@ -101,7 +101,7 @@ const homeStyles = StyleSheet.create({
     marginTop: 10,
   },
   viewAll: {
-    color: "orange",
+    color: "#FD721D",
     fontSize: 14,
   },
   bottomNav: {
@@ -125,11 +125,11 @@ const homeStyles = StyleSheet.create({
     fontSize: 10,
   },
   navTextActive: {
-    color: "orange",
+    color: "#FD721D",
     fontSize: 10,
   },
   navLive: {
-    backgroundColor: "orange",
+    backgroundColor: "#FD721D",
     width: 60,
     height: 60,
     borderRadius: 30,
@@ -164,7 +164,7 @@ const homeStyles = StyleSheet.create({
       color: "#aaa",
     },
     profileBtn: {
-      backgroundColor: "orange",
+      backgroundColor: "#FD721D",
       paddingVertical: 8,
       paddingHorizontal: 15,
       borderRadius: 5,
@@ -198,7 +198,7 @@ const homeStyles = StyleSheet.create({
     marginHorizontal: 15,
     borderRadius: 5,
     overflow: "hidden",
-    backgroundColor: "orange",
+    backgroundColor: "#FD721D",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
@@ -235,6 +235,8 @@ const homeStyles = StyleSheet.create({
   adShoeImage: {
     width: width * 0.4,
     height: 100,
+    transform: [{ rotate: '-35deg' }],
+
   },
 
     newsList: {
@@ -298,9 +300,279 @@ const homeStyles = StyleSheet.create({
       fontSize: 10,
     },
     navTextActive: {
-      color: "orange",
+      color: "#FD721D",
       fontSize: 10,
     },
+    latestUpdateContainer: {
+      paddingHorizontal: 15,
+      flexGrow: 1,
+      paddingBottom: 70, // To prevent bottom nav from covering content
+    },
+    latestUpdateTitle: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      color: '#fff',
+      marginTop: 15,
+      marginBottom: 20,
+      textAlign: 'left',
+    },
+    latestUpdateDropdowns: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginBottom: 20,
+    },
+    latestUpdateDropdown: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: '#1E1E70',
+      borderRadius: 8,
+      paddingHorizontal: 15,
+      paddingVertical: 10,
+      width: (width - 45) / 2, // 15*3 padding
+      justifyContent: 'space-between',
+    },
+    latestUpdateDropdownText: {
+      color: '#fff',
+      fontSize: 14,
+    },
+    latestUpdateNewsCard: {
+      marginBottom: 15,
+      borderRadius: 8,
+      overflow: 'hidden',
+      position: 'relative',
+    },
+    latestUpdateNewsImage: {
+      width: '100%',
+      height: 200,
+      resizeMode: 'cover',
+    },
+    latestUpdateNewsOverlay: {
+      ...StyleSheet.absoluteFillObject,
+      backgroundColor: 'rgba(0, 0, 0, 0.4)',
+      justifyContent: 'flex-end',
+      padding: 15,
+    },
+    latestUpdateNewsTitle: {
+      color: '#fff',
+      fontSize: 16,
+      fontWeight: 'bold',
+      marginBottom: 10,
+    },
+    latestUpdateNewsMeta: {
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    latestUpdateMetaText: {
+      color: '#FD721D',
+      fontSize: 12,
+      marginHorizontal: 5,
+    },
+    dangalContainer: {
+      paddingHorizontal: 15,
+      flexGrow: 1,
+      paddingBottom: 80, // Space for the bottom nav
+    },
+    dangalTitle: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      color: '#fff',
+      marginBottom: 20,
+    },
+    dangalDropdowns: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginBottom: 20,
+    },
+    dangalDropdown: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: '#1E1E70',
+      borderRadius: 8,
+      paddingHorizontal: 10,
+      paddingVertical: 10,
+      width: (width - 60) / 3, // 15*4 padding for space
+      justifyContent: 'space-between',
+    },
+    dangalDropdownText: {
+      color: '#fff',
+      fontSize: 12,
+    },
+    dangalMatchCard: {
+      backgroundColor: '#4C4CC2',
+      borderRadius: 5,
+      marginBottom: 20,
+      padding: 15, // Padding for the image and text
+    },
+    dangalMatchImage: {
+      width: '100%',
+      height: width * 0.5, // Adjust height based on aspect ratio
+      borderRadius: 10,
+      marginBottom: 15, // Space between image and location text
+    },
+    dangalLocationSection: {
+      flexDirection: 'row',
+      alignItems: 'left',
+      justifyContent: 'left',
+    },
+    locationText: {
+      color: '#fff',
+      fontSize: 14,
+      marginLeft: 5,
+    },
+    // Add these new styles to your existing homeStyles.js file
+
+    floatingActionButton: {
+      position: 'absolute',
+      bottom: 80, // Adjust this value to control distance from the bottom nav
+      right: 25,
+      width: 60,
+      height: 60,
+      borderRadius: 30,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#FD721D', // Use the orange accent color
+      elevation: 5, // Adds a shadow on Android
+      shadowColor: '#000', // Adds a shadow on iOS
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.3,
+      shadowRadius: 3.84,
+    },
+    floatingActionButtonImage: {
+      width: 28,
+      height: 28,
+      tintColor: '#fff', // Use tintColor to make the plus sign white
+    },
+    addDangalHeaderTitle: {
+      color: '#fff',
+      fontSize: 20,
+      fontWeight: 'bold',
+      flex: 1, // Allow title to take up available space
+      textAlign: 'center',
+      marginLeft: -30, // Adjust this if the logo pushes it too far
+    },
+    addDangalContainer: {
+      padding: 15,
+      flexGrow: 1,
+      paddingBottom: 80, // Space for the bottom nav
+    },
+    addDangalDropdownsContainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginBottom: 15,
+    },
+    addDangalDropdown: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: '#1E1E70',
+      borderRadius: 8,
+      paddingHorizontal: 15,
+      paddingVertical: 12,
+      width: (width - 45) / 2, // 15*3 padding, for two items
+      justifyContent: 'space-between',
+    },
+    addDangalDateDropdown: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: '#1E1E70',
+      borderRadius: 8,
+      paddingHorizontal: 15,
+      paddingVertical: 12,
+      marginBottom: 20,
+      justifyContent: 'space-between',
+    },
+    addDangalDropdownText: {
+      color: '#fff',
+      fontSize: 14,
+    },
+    addDangalLabel: {
+      color: '#fff',
+      fontSize: 16,
+      fontWeight: 'bold',
+      marginBottom: 10,
+    },
+    addDangalImageUploadBox: {
+      backgroundColor: '#1E1E70',
+      borderRadius: 8,
+      height: 200,
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginBottom: 20,
+      borderWidth: 1,
+      borderColor: '#FD721D', // Orange border
+      borderStyle: 'dashed', // Dashed border
+    },
+    addDangalUploadedImage: {
+      width: '100%',
+      height: '100%',
+      borderRadius: 8,
+      resizeMode: 'cover',
+    },
+    addDangalUploadText: {
+      color: '#FD721D',
+      fontSize: 14,
+      marginTop: 10,
+    },
+    addDangalTextInput: {
+      backgroundColor: '#1E1E70',
+      borderRadius: 8,
+      color: '#fff',
+      paddingHorizontal: 15,
+      paddingVertical: 12,
+      fontSize: 14,
+      marginBottom: 20,
+    },
+    addDangalDescriptionInput: {
+      height: 120, // Increased height for description
+      textAlignVertical: 'top', // Aligns text to the top for multiline input
+    },
+    addDangalButton: {
+      backgroundColor: '#FD721D',
+      borderRadius: 8,
+      paddingVertical: 15,
+      alignItems: 'center',
+      marginTop: 20,
+    },
+    addDangalButtonText: {
+      color: '#fff',
+      fontSize: 18,
+      fontWeight: 'bold',
+    },
+    photosContainer: {
+      paddingHorizontal: 15,
+      flexGrow: 1,
+      paddingBottom: 80, // Space for the bottom nav
+    },
+    photosGalleryTitle: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      color: '#fff',
+      marginTop: 15,
+      marginBottom: 20,
+    },
+    photoCard: {
+      flexDirection: 'row',
+      backgroundColor: '#1E1E70',
+      borderRadius: 8,
+      marginBottom: 15,
+      overflow: 'hidden',
+    },
+    photoImage: {
+      width: 120, // Fixed width for the image
+      height: 120, // Fixed height for the image
+      resizeMode: 'cover',
+    },
+    photoTextContainer: {
+      flex: 1, // Takes up the remaining space
+      padding: 10,
+      justifyContent: 'center', // Center text vertically
+    },
+    photoTitleText: {
+      color: '#fff',
+      fontSize: 16,
+      fontWeight: 'bold',
+      lineHeight: 20, // Ensures proper spacing for multi-line text
+    },
+
 });
 
 export default homeStyles;

@@ -48,7 +48,7 @@ const listStyles = StyleSheet.create({
     width: (width / 2) - 20, // 2 cards per row with margin
     backgroundColor: "#2D2D92",
     borderRadius: 5,
-    borderColor:"white",
+    borderColor:"#4C4CC2",
     borderWidth:0.5,
     padding: 15,
     alignItems: "center",
@@ -58,8 +58,8 @@ const listStyles = StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 50,
-    borderWidth: 2,
-    borderColor: "orange",
+    borderWidth: 0,
+    borderColor: 'none',
     marginBottom: 10,
     justifyContent: 'center',
     alignItems: 'center',
@@ -101,11 +101,11 @@ const listStyles = StyleSheet.create({
     fontSize: 10,
   },
   navTextActive: {
-    color: "orange",
+    color: "#FD721D",
     fontSize: 10,
   },
   navLive: {
-    backgroundColor: "orange",
+    backgroundColor: "#FD721D",
     width: 60,
     height: 60,
     borderRadius: 30,

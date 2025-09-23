@@ -7,21 +7,25 @@ import homeStyles from "../styles/homeStyles";
 const { width } = Dimensions.get("window");
 
 const coaches = [
-  { name: 'Abhishek Yadav', role: 'Selection Committee', image: require('../assets/bp.jpg') },
-  { name: 'Ashok Shinde', role: 'Air-India Flight Purser', image: require('../assets/bp.jpg') },
-  { name: 'Banani Shah', role: 'NIS Coach', image: require('../assets/bp.jpg') },
-  { name: 'BC Ramesh', role: 'Head Coach of Bengal', image: require('../assets/bp.jpg') },
-  { name: 'Bhaskaran E', role: 'CAPT. Bhaskarane', image: require('../assets/bp.jpg') },
-  { name: 'Dr G R Sridhar Kumar', role: 'Chief Kabaddi Coach', image: require('../assets/bp.jpg') },
+  { name: 'Abhishek Yadav', role: 'Selection Committee', image: require('../assets/coach1.png') },
+  { name: 'Ashok Shinde', role: 'Air-India Flight Purser', image: require('../assets/coach2.png') },
+  { name: 'Banani Shah', role: 'NIS Coach', image: require('../assets/coach3.png') },
+  { name: 'BC Ramesh', role: 'Head Coach of Bengal', image: require('../assets/coach4.png') },
+  { name: 'Bhaskaran E', role: 'CAPT. Bhaskarane', image: require('../assets/coach5.png') },
+  { name: 'Dr G R Sridhar Kumar', role: 'Chief Kabaddi Coach', image: require('../assets/coach6.png') },
+  { name: 'Dr G R Sridhar Kumar', role: 'Chief Kabaddi Coach', image: require('../assets/coach6.png') },
+  { name: 'Dr G R Sridhar Kumar', role: 'Chief Kabaddi Coach', image: require('../assets/coach6.png') },
 ];
 
 const referees = [
-  { name: 'Sharafat Ali', role: 'Technical Official', image: require('../assets/bp.jpg') },
-  { name: 'Abdul Jabbar', role: 'Physical Instructor', image: require('../assets/bp.jpg') },
-  { name: 'Sunil Kumar', role: 'Technical Official', image: require('../assets/bp.jpg') },
-  { name: 'S Raju', role: 'Engineer at Shree cement', image: require('../assets/bp.jpg') },
-  { name: 'Vikram', role: 'Technical Official', image: require('../assets/bp.jpg') },
-  { name: 'Angrej Singh', role: 'Punjab Kabaddi Association', image: require('../assets/bp.jpg') },
+  { name: 'Sharafat Ali', role: 'Technical Official', image: require('../assets/ref1.png') },
+  { name: 'Abdul Jabbar', role: 'Physical Instructor', image: require('../assets/ref2.png') },
+  { name: 'Sunil Kumar', role: 'Technical Official', image: require('../assets/ref3.png') },
+  { name: 'S Raju', role: 'Engineer at Shree cement', image: require('../assets/ref4.png') },
+  { name: 'Vikram', role: 'Technical Official', image: require('../assets/ref5.png') },
+  { name: 'Angrej Singh', role: 'Punjab Kabaddi Association', image: require('../assets/ref6.png') },
+  { name: 'Angrej Singh', role: 'Punjab Kabaddi Association', image: require('../assets/ref6.png') },
+  { name: 'Angrej Singh', role: 'Punjab Kabaddi Association', image: require('../assets/ref6.png') },
 ];
 
 
@@ -59,7 +63,7 @@ const Home = ({ navigation }) => {
               resizeMode="cover"
             />
             <Image
-              source={require("../assets/flag.jpg")}
+              source={require("../assets/player1.png")}
               style={homeStyles.banner}
               resizeMode="cover"
             />
@@ -74,7 +78,7 @@ const Home = ({ navigation }) => {
 
         <Text style={homeStyles.sectionTitle}>Category</Text>
         <View style={homeStyles.categoryContainer}>
-          <View style={homeStyles.categoryRow}>
+         <View style={homeStyles.categoryRow}>
 
             <TouchableOpacity style={homeStyles.categoryItem}>
               <Icon name="medal-outline" size={28} color="#fff" />
@@ -104,12 +108,18 @@ const Home = ({ navigation }) => {
           </View>
 
           <View style={homeStyles.categoryRow}>
-            <TouchableOpacity style={homeStyles.categoryItem}>
+            <TouchableOpacity
+              style={homeStyles.categoryItem}
+               onPress={() => navigation.navigate('Dangal')}
+            >
               <Icon name="trophy-outline" size={28} color="#fff" />
               <Text style={homeStyles.categoryText}>Dangal</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={homeStyles.categoryItem}>
+            <TouchableOpacity
+              style={homeStyles.categoryItem}
+               onPress={() => navigation.navigate('Photos')}
+            >
               <Icon name="images-outline" size={28} color="#fff" />
               <Text style={homeStyles.categoryText}>Photos</Text>
             </TouchableOpacity>
@@ -136,7 +146,7 @@ const Home = ({ navigation }) => {
 
         <View style={homeStyles.newsHeader}>
           <Text style={homeStyles.sectionTitle}>News</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('LatestUpdate')}>
             <Text style={homeStyles.viewAll}>View All</Text>
           </TouchableOpacity>
         </View>
@@ -146,32 +156,32 @@ const Home = ({ navigation }) => {
       </ScrollView>
 
 
-      <View style={homeStyles.bottomNav}>
-        <TouchableOpacity style={homeStyles.navItem}>
-          <Icon name="home" size={24} color="orange" />
-          <Text style={homeStyles.navTextActive}>Home</Text>
-        </TouchableOpacity>
+          <View style={homeStyles.bottomNav}>
+            <TouchableOpacity style={homeStyles.navItem}>
+              <Icon name="home" size={24} color="#FD721D" />
+              <Text style={homeStyles.navTextActive}>Home</Text>
+            </TouchableOpacity>
 
-        <TouchableOpacity style={homeStyles.navItem}>
-          <Icon name="calendar-outline" size={24} color="#fff" />
-          <Text style={homeStyles.navText}>Event</Text>
-        </TouchableOpacity>
+            <TouchableOpacity style={homeStyles.navItem}>
+              <Icon name="calendar-outline" size={24} color="#fff" />
+              <Text style={homeStyles.navText}>Event</Text>
+            </TouchableOpacity>
 
-        <TouchableOpacity style={homeStyles.navLive}>
-          <Icon name="radio-outline" size={28} color="#fff" />
-          <Text style={homeStyles.navTextLive}>Live</Text>
-        </TouchableOpacity>
+            <TouchableOpacity style={homeStyles.navLive}>
+              <Icon name="radio-outline" size={28} color="#fff" />
+              <Text style={homeStyles.navTextLive}>Live</Text>
+            </TouchableOpacity>
 
-        <TouchableOpacity style={homeStyles.navItem}>
-          <Icon name="play-circle-outline" size={24} color="#fff" />
-          <Text style={homeStyles.navText}>Videos</Text>
-        </TouchableOpacity>
+            <TouchableOpacity style={homeStyles.navItem}>
+              <Icon name="play-circle-outline" size={24} color="#fff" />
+              <Text style={homeStyles.navText}>Videos</Text>
+            </TouchableOpacity>
 
-        <TouchableOpacity style={homeStyles.navItem}>
-          <Icon name="menu-outline" size={24} color="#fff" />
-          <Text style={homeStyles.navText}>More</Text>
-        </TouchableOpacity>
-      </View>
+            <TouchableOpacity style={homeStyles.navItem}>
+              <Icon name="menu-outline" size={24} color="#fff" />
+              <Text style={homeStyles.navText}>More</Text>
+            </TouchableOpacity>
+          </View>
     </View>
   );
 };
