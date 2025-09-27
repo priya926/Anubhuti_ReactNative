@@ -683,6 +683,7 @@ const homeStyles = StyleSheet.create({
       teamCardLogo: {
         width: 50,
         height: 50,
+        backgroundColor: 'white',
         borderRadius: 25,
         marginRight: 15,
       },
@@ -698,6 +699,61 @@ const homeStyles = StyleSheet.create({
         color: '#aaa',
         fontSize: 12,
         marginTop: 2,
+      },
+      // Add these new styles to your existing homeStyles.js file
+      liveScrollView: {
+        paddingHorizontal: 15,
+        flexGrow: 1,
+        paddingBottom: 80, // Space for the bottom nav
+      },
+      liveTitle: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        color: '#fff',
+        marginTop: 15,
+        marginBottom: 20,
+      },
+      liveVideoCard: {
+        marginBottom: 20,
+        borderRadius: 8,
+        overflow: 'hidden',
+        position: 'relative',
+      },
+      liveVideoThumbnail: {
+        width: '100%',
+        height: 200,
+        resizeMode: 'cover',
+      },
+      liveBadgeContainer: {
+        position: 'absolute',
+        top: 10,
+        left: 10,
+        flexDirection: 'row',
+      },
+      liveBadge: {
+        backgroundColor: '#D10000',
+        borderRadius: 4,
+        paddingHorizontal: 8,
+        paddingVertical: 4,
+        marginRight: 5,
+      },
+      liveBadgeText: {
+        color: '#fff',
+        fontSize: 12,
+        fontWeight: 'bold',
+      },
+      liveViewersBadge: {
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        borderRadius: 4,
+        paddingHorizontal: 8,
+        paddingVertical: 4,
+        flexDirection: 'row',
+        alignItems: 'center',
+      },
+      liveViewersText: {
+        color: '#fff',
+        fontSize: 12,
+        marginLeft: 5,
       },
 
 

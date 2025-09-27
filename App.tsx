@@ -31,6 +31,8 @@ import AddDangal from './src/screens/AddDangal';
 import Photos from './src/screens/Photos';
 import Videos from './src/screens/Videos';
 import TeamsScreen from './src/screens/TeamsScreen';
+import Live from './src/screens/Live';
+import Academic from './src/screens/Academic';
 
 const Stack = createStackNavigator();
 
@@ -60,6 +62,8 @@ function Navigator(){
         <Stack.Screen name="Photos" component={Photos} />
         <Stack.Screen name="Videos" component={Videos} />
         <Stack.Screen name="TeamsScreen" component={TeamsScreen} />
+        <Stack.Screen name="Live" component={Live} />
+        <Stack.Screen name="Academic" component={Academic} />
       </Stack.Navigator>
     </NavigationContainer>
   );
