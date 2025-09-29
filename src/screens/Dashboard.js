@@ -43,7 +43,7 @@ const Dashboard = ({ navigation }) => {
           </View>
           <TouchableOpacity
             style={homeStyles.profileBtn}
-             onPress={() => navigation.navigate('Dangal')}
+             onPress={() => navigation.navigate('Profile')}
           >
             <Text style={homeStyles.profileBtnText}>Complete Profile</Text>
           </TouchableOpacity>

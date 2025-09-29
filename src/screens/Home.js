@@ -3,6 +3,7 @@ import {View,Text,Dimensions,ScrollView,Image,TouchableOpacity} from "react-nati
 import Swiper from "react-native-swiper";
 import Icon from "react-native-vector-icons/Ionicons";
 import homeStyles from "../styles/homeStyles";
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const { width } = Dimensions.get("window");
 
@@ -35,15 +36,27 @@ const Home = ({ navigation }) => {
           <ScrollView showsVerticalScrollIndicator={false}>
 
             <View style={homeStyles.header}>
-              <TouchableOpacity onPress={() => navigation.navigate("Dashboard")}>
+              <TouchableOpacity onPress={() => navigation.goBack()}>
                 <Image
                   source={require("../assets/logo.png")}
                   style={homeStyles.logo}
                 />
               </TouchableOpacity>
+
               <View style={homeStyles.headerIcons}>
-                <Icon name="search-outline" size={26} color="#fff" style={homeStyles.icon} />
-                <Icon name="notifications-outline" size={26} color="#fff" />
+                {/* Search Icon */}
+                <TouchableOpacity style={homeStyles.icon}>
+                  {/* Assuming you meant Ionicons for 'search-outline' */}
+                  <Ionicons name="search-outline" size={26} color="#fff" />
+                </TouchableOpacity>
+
+                {/* Notification Icon (Now Tappable) */}
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('NotificationScreen')}
+                >
+                  {/* Assuming you meant Ionicons for 'notifications-outline' */}
+                  <Ionicons name="notifications-outline" size={26} color="#fff" />
+                </TouchableOpacity>
               </View>
             </View>
 

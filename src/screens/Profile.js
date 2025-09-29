@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, SafeAreaView, Dimensions, Alert } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, SafeAreaView, Dimensions } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -18,7 +18,10 @@ const resultsData = [
   { id: '2', name: 'Bajrang Punia', location: 'India', date: 'Sep 2022', weight: '65 Kg', medal: require('../assets/silver.png'), category: 'World Championship' },
 ];
 
-const Profile = () => {
+// -----------------------------------------------------------
+// MODIFIED: Component now receives 'navigation' prop
+// -----------------------------------------------------------
+const Profile = ({ navigation }) => {
   const [activeTab, setActiveTab] = useState('Olympic');
 
   // Filter results based on the active tab (simplified for mock data)
@@ -27,23 +30,12 @@ const Profile = () => {
   // Tabs structure
   const tabs = ['All', '2021', '2022', 'Olympic', 'Games', 'World Championship'];
 
-  // Handler for the Delete Account button
+  // -----------------------------------------------------------
+  // MODIFIED: Function now navigates to the confirmation page
+  // -----------------------------------------------------------
   const handleDeleteAccount = () => {
-    Alert.alert(
-      "Confirm Deletion",
-      "Are you sure you want to delete your account? This action cannot be undone.",
-      [
-        {
-          text: "Cancel",
-          style: "cancel"
-        },
-        {
-          text: "Delete",
-          onPress: () => console.log("Account Deletion Confirmed"), // Replace with your actual delete logic
-          style: "destructive"
-        }
-      ]
-    );
+    // Replace 'DeleteConfirmationScreen' with the exact route name you defined
+    navigation.navigate('DeleteConfirmationScreen');
   };
 
   // Reusable component for displaying medal count
@@ -58,7 +50,7 @@ const Profile = () => {
     <SafeAreaView style={styles.mainContainer}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <MaterialIcons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Image
@@ -146,7 +138,7 @@ const Profile = () => {
         {/* New Delete Account Button */}
         <TouchableOpacity
           style={styles.deleteButton}
-          onPress={handleDeleteAccount}
+          onPress={handleDeleteAccount} // This now navigates
         >
           <MaterialIcons name="delete-forever" size={24} color="#fff" />
           <Text style={styles.deleteButtonText}>Delete Account</Text>
@@ -183,7 +175,7 @@ const Profile = () => {
 
 export default Profile;
 
-// --- CSS Styles for this page only (including new delete button styles) ---
+// --- CSS Styles for this page only (No changes here, as they were correct) ---
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
@@ -386,7 +378,7 @@ const styles = StyleSheet.create({
     height: 40,
   },
 
-  // NEW Delete Account Button Styles
+  // Delete Account Button Styles
   deleteButton: {
     flexDirection: 'row',
     backgroundColor: '#D10000', // Red color for delete

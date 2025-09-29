@@ -7,17 +7,17 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 // NOTE: In a real app, this function would use a navigation library (like React Navigation)
 // to navigate to the LoginScreen. For simulation, we'll use a placeholder function.
 const navigateToLoginScreen = () => {
-    Alert.alert("Success", "Account deleted. Redirecting to LoginScreen.js...");
+    Alert.alert("Success", "Account deleted. Redirecting to Login...");
     console.log("--- Redirecting to LoginScreen.js ---");
     // Example: props.navigation.navigate('LoginScreen');
 };
 
-const DeleteConfirmationScreen = () => {
+const DeleteConfirmationScreen = ({ navigation }) => {
 
     const handleConfirmDelete = () => {
         // Here you would typically call an API to delete the account
         // and then navigate away.
-        navigateToLoginScreen();
+        navigation.navigate('LoginScreen');
     };
 
     const handleCancel = () => {

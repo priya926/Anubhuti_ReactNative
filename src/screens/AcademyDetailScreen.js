@@ -19,12 +19,12 @@ const facilitiesData = [
 
 
 
-const AcademyDetailScreen = () => {
+const AcademyDetailScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.mainContainer}>
       {/* Header (Reusing existing style structure) */}
       <View style={homeStyles.header}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <MaterialIcons name="arrow-back-ios" size={24} color="#fff" />
         </TouchableOpacity>
         <Image
@@ -102,16 +102,7 @@ const AcademyDetailScreen = () => {
           ))}
         </View>
 
-        {/* Social Media */}
-        <Text style={styles.sectionHeader}>Academy Social Media Handle:</Text>
-        <View style={styles.socialMediaContainer}>
-          {socialMediaData.map((item) => (
-            <TouchableOpacity key={item.id} style={styles.socialIconWrapper}>
-              {/* Note: This assumes you are using local image assets for social icons */}
-              <Image source={item.icon} style={styles.socialIcon} />
-            </TouchableOpacity>
-          ))}
-        </View>
+
 
         {/* Spacer for bottom nav */}
         <View style={{ height: 30 }} />

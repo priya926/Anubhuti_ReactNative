@@ -63,7 +63,11 @@ const Academic = ({ navigation }) => {
         </View>
 
         {academiesData.map((academy) => (
-          <View key={academy.id} style={homeStyles.academyCard}>
+          <TouchableOpacity
+            key={academy.id}
+            style={homeStyles.academyCard}
+            onPress={() => navigation.navigate('AcademyDetailScreen', { academyId: academy.id, academyName: academy.name })}
+          >
             <Image
               source={academy.image}
               style={homeStyles.academyImage}
@@ -73,7 +77,7 @@ const Academic = ({ navigation }) => {
               <Text style={homeStyles.academyLocationText}>{academy.location}</Text>
             </View>
             <Text style={homeStyles.academyName}>{academy.name}</Text>
-          </View>
+          </TouchableOpacity>
         ))}
       </ScrollView>
 

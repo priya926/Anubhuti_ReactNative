@@ -46,7 +46,7 @@ const notificationsData = [
   },
 ];
 
-const NotificationScreen = () => {
+const NotificationScreen = ({ navigation }) => {
 
   // Group notifications by day
   const groupedNotifications = notificationsData.reduce((acc, notif) => {
@@ -73,7 +73,7 @@ const NotificationScreen = () => {
     <SafeAreaView style={styles.mainContainer}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Dashboard")}>
           <MaterialIcons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Image
