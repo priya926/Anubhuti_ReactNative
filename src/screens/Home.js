@@ -80,12 +80,18 @@ const Home = ({ navigation }) => {
         <View style={homeStyles.categoryContainer}>
          <View style={homeStyles.categoryRow}>
 
-            <TouchableOpacity style={homeStyles.categoryItem}>
+            <TouchableOpacity
+              style={homeStyles.categoryItem}
+               onPress={() => navigation.navigate('OlympicsScreen')}
+            >
               <Icon name="medal-outline" size={28} color="#fff" />
               <Text style={homeStyles.categoryText}>Olympic</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={homeStyles.categoryItem}>
+            <TouchableOpacity
+              style={homeStyles.categoryItem}
+               onPress={() => navigation.navigate('WrestlerProfileScreen')}
+            >
               <Icon name="person-outline" size={28} color="#fff" />
               <Text style={homeStyles.categoryText}>Wrestler</Text>
             </TouchableOpacity>
@@ -125,19 +131,19 @@ const Home = ({ navigation }) => {
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={homeStyles.categoryItem}
-               onPress={() => navigation.navigate('Academic')}
+              style={homeStyles.navItem}
+               onPress={() => navigation.navigate('TeamsScreen')}
             >
-              <Icon name="school-outline" size={28} color="#fff" />
-              <Text style={homeStyles.categoryText}>Academies</Text>
+              <Icon name="people-outline" size={28} color="#fff" />
+              <Text style={homeStyles.navText}>Teams</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={homeStyles.categoryItem}
-               onPress={() => navigation.navigate('LatestUpdate')}
+               onPress={() => navigation.navigate('Shop')}
             >
-              <Icon name="newspaper-outline" size={28} color="#fff" />
-              <Text style={homeStyles.categoryText}>News</Text>
+              <Icon name="storefront-outline" size={28} color="#fff" />
+              <Text style={homeStyles.categoryText}>Shop</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -168,7 +174,10 @@ const Home = ({ navigation }) => {
               <Text style={homeStyles.navTextActive}>Home</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={homeStyles.navItem}>
+            <TouchableOpacity
+              style={homeStyles.navItem}
+               onPress={() => navigation.navigate('Event')}
+            >
               <Icon name="calendar-outline" size={24} color="#fff" />
               <Text style={homeStyles.navText}>Event</Text>
             </TouchableOpacity>
@@ -191,7 +200,10 @@ const Home = ({ navigation }) => {
               <Text style={homeStyles.navText}>Videos</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={homeStyles.navItem}>
+            <TouchableOpacity
+              style={homeStyles.navItem}
+               onPress={() => navigation.navigate('MoreScreen')}
+            >
               <Icon name="menu-outline" size={24} color="#fff" />
               <Text style={homeStyles.navText}>More</Text>
             </TouchableOpacity>

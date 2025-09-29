@@ -755,6 +755,190 @@ const homeStyles = StyleSheet.create({
         fontSize: 12,
         marginLeft: 5,
       },
+      // ShopScreen Styles (Add to homeStyles.js)
+        shopScrollView: {
+          paddingBottom: 80, // Space for the bottom nav
+        },
+        shopBannerContainer: {
+          backgroundColor: '#FD721D',
+          marginHorizontal: 15,
+          borderRadius: 8,
+          flexDirection: 'row',
+          alignItems: 'center',
+          padding: 15,
+          marginBottom: 20,
+          height: 150,
+          overflow: 'hidden',
+        },
+        shopBannerTextContent: {
+          flex: 1,
+          marginRight: 10,
+        },
+        shopBannerHeadline: {
+          color: '#fff',
+          fontSize: 14,
+          fontWeight: 'bold',
+          marginBottom: 5,
+        },
+        shopBannerTitle: {
+          color: '#fff',
+          fontSize: 30,
+          fontWeight: 'bold',
+          marginBottom: 5,
+        },
+        shopBannerSubtitle: {
+          color: '#fff',
+          fontSize: 14,
+          marginBottom: 10,
+        },
+        shopShopButton: {
+          backgroundColor: 'white',
+          paddingVertical: 8,
+          paddingHorizontal: 15,
+          borderRadius: 5,
+          alignSelf: 'flex-start',
+        },
+        shopShopButtonText: {
+          color: '#FD721D',
+          fontSize: 14,
+          fontWeight: 'bold',
+        },
+        shopBannerImage: {
+          width: width * 0.35, // Adjust width based on screen size
+          height: 140,
+        },
+        shopSection: {
+          paddingHorizontal: 15,
+          marginBottom: 20,
+        },
+        shopSectionHeader: {
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginBottom: 15,
+        },
+        shopSectionTitleText: {
+          fontSize: 20,
+          fontWeight: 'bold',
+          color: '#fff',
+        },
+        shopProductsRow: {
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+        },
+        shopProductCard: {
+          width: (width - 45) / 2, // 15*3 padding
+          backgroundColor: 'white',
+          borderRadius: 8,
+          padding: 10,
+          alignItems: 'center',
+        },
+        shopProductImage: {
+          width: '90%',
+          height: 100,
+          marginBottom: 10,
+        },
+        shopProductTitle: {
+          color: '#fff',
+          fontSize: 12,
+          textAlign: 'center',
+          marginBottom: 5,
+          height: 30, // Ensures consistent height for text
+        },
+        shopProductPrice: {
+          color: '#FD721D',
+          fontSize: 16,
+          fontWeight: 'bold',
+        },
+        // Add these new styles to your existing homeStyles.js file
+          academiesScrollView: {
+            paddingHorizontal: 15,
+            flexGrow: 1,
+            paddingBottom: 80,
+          },
+          academiesFiltersContainer: {
+            marginBottom: 20,
+          },
+          academiesDropdownsTop: {
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            marginBottom: 10,
+          },
+          academiesDropdownsBottom: {
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+          },
+          academiesSearchInputContainer: {
+            flex: 1,
+            backgroundColor: '#1E1E70',
+            borderRadius: 8,
+            paddingHorizontal: 15,
+            marginRight: 10,
+            justifyContent: 'center',
+          },
+          academiesSearchInput: {
+            color: '#fff',
+          },
+          academiesDropdown: {
+            flexDirection: 'row',
+            alignItems: 'center',
+            backgroundColor: '#1E1E70',
+            borderRadius: 8,
+            paddingHorizontal: 15,
+            paddingVertical: 12,
+            width: (width - 45) / 2,
+            justifyContent: 'space-between',
+          },
+          academiesDropdownText: {
+            color: '#fff',
+            fontSize: 14,
+          },
+          academiesApplyButton: {
+            flex: 1,
+            backgroundColor: '#FD721D',
+            borderRadius: 8,
+            paddingVertical: 12,
+            alignItems: 'center',
+            marginLeft: 10,
+          },
+          academiesApplyButtonText: {
+            color: '#fff',
+            fontSize: 14,
+            fontWeight: 'bold',
+          },
+          academyCard: {
+            backgroundColor: '#1E1E70',
+            borderRadius: 8,
+            marginBottom: 15,
+            overflow: 'hidden',
+          },
+          academyImage: {
+            width: '100%',
+            height: 200,
+            resizeMode: 'cover',
+          },
+          academyLocationBadge: {
+            position: 'absolute',
+            top: 10,
+            left: 10,
+            flexDirection: 'row',
+            alignItems: 'center',
+            backgroundColor: '#1E1E70',
+            borderRadius: 8,
+            paddingHorizontal: 10,
+            paddingVertical: 5,
+          },
+          academyLocationText: {
+            color: '#fff',
+            fontSize: 12,
+            marginLeft: 5,
+          },
+          academyName: {
+            color: '#fff',
+            fontSize: 16,
+            fontWeight: 'bold',
+            padding: 15,
+          },
 
 
 });

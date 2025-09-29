@@ -41,7 +41,10 @@ const Dashboard = ({ navigation }) => {
             <Text style={homeStyles.welcomeText}>Welcome Back !</Text>
             <Text style={homeStyles.userName}>Anubhutiii</Text>
           </View>
-          <TouchableOpacity style={homeStyles.profileBtn}>
+          <TouchableOpacity
+            style={homeStyles.profileBtn}
+             onPress={() => navigation.navigate('Dangal')}
+          >
             <Text style={homeStyles.profileBtnText}>Complete Profile</Text>
           </TouchableOpacity>
         </View>
@@ -88,12 +91,18 @@ const Dashboard = ({ navigation }) => {
                 <View style={homeStyles.categoryContainer}>
                   <View style={homeStyles.categoryRow}>
 
-                    <TouchableOpacity style={homeStyles.categoryItem}>
+                <TouchableOpacity
+                    style={homeStyles.categoryItem}
+                     onPress={() => navigation.navigate('Dangal')}
+                  >
                       <Icon name="medal-outline" size={28} color="#fff" />
                       <Text style={homeStyles.categoryText}>Olympic</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={homeStyles.categoryItem}>
+                    <TouchableOpacity
+                        style={homeStyles.categoryItem}
+                         onPress={() => navigation.navigate('Dangal')}
+                      >
                       <Icon name="person-outline" size={28} color="#fff" />
                       <Text style={homeStyles.categoryText}>Wrestler</Text>
                     </TouchableOpacity>
@@ -215,7 +224,10 @@ const Dashboard = ({ navigation }) => {
           <Text style={homeStyles.navTextActive}>Home</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={homeStyles.navItem}>
+        <TouchableOpacity
+            style={homeStyles.navItem}
+             onPress={() => navigation.navigate('Dangal')}
+          >
           <Icon name="calendar-outline" size={24} color="#fff" />
           <Text style={homeStyles.navText}>Event</Text>
         </TouchableOpacity>
@@ -236,7 +248,10 @@ const Dashboard = ({ navigation }) => {
           <Text style={homeStyles.navText}>Teams</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={homeStyles.navItem}>
+        <TouchableOpacity
+          style={homeStyles.navItem}
+           onPress={() => navigation.navigate('Dangal')}
+        >
           <Icon name="menu-outline" size={24} color="#fff" />
           <Text style={homeStyles.navText}>More</Text>
         </TouchableOpacity>

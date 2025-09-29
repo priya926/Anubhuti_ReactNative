@@ -33,6 +33,15 @@ import Videos from './src/screens/Videos';
 import TeamsScreen from './src/screens/TeamsScreen';
 import Live from './src/screens/Live';
 import Academic from './src/screens/Academic';
+import Shop from './src/screens/Shop';
+import AcademyDetailScreen from './src/screens/AcademyDetailScreen';
+import MoreScreen from './src/screens/MoreScreen';
+import Event from './src/screens/Event';
+import WrestlerProfileScreen from './src/screens/WrestlerProfileScreen';
+import OlympicsScreen from './src/screens/OlympicsScreen';
+import NotificationScreen from './src/screens/NotificationScreen';
+import Profile from './src/screens/Profile';
+import DeleteConfirmationScreen from './src/screens/DeleteConfirmationScreen';
 
 const Stack = createStackNavigator();
 
@@ -64,6 +73,15 @@ function Navigator(){
         <Stack.Screen name="TeamsScreen" component={TeamsScreen} />
         <Stack.Screen name="Live" component={Live} />
         <Stack.Screen name="Academic" component={Academic} />
+        <Stack.Screen name="Shop" component={Shop} />
+        <Stack.Screen name="AcademyDetailScreen" component={AcademyDetailScreen} />
+        <Stack.Screen name="MoreScreen" component={MoreScreen} />
+        <Stack.Screen name="Event" component={Event} />
+        <Stack.Screen name="WrestlerProfileScreen" component={WrestlerProfileScreen} />
+        <Stack.Screen name="OlympicsScreen" component={OlympicsScreen} />
+        <Stack.Screen name="NotificationScreen" component={NotificationScreen} />
+        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="DeleteConfirmationScreen" component={DeleteConfirmationScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
